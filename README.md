@@ -12,13 +12,13 @@
 1. <p>Git clone from this repo</p>
 2. <p>cd into the cloned directory</p>
 3. <p>setup .env (Copy .env.example as .env and set DB details)</p>
-4. <p>Open a terminal and run:
+4. <p>Open a terminal and run:</p>
 > composer install
-Wait until the install process is completed, then run 
+<p>Wait until the install process is completed, then run</p> 
 > php artisan key:generate
-followed by
-> php artisan serve</p>
-5. <p>Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api<br>
+<p>followed by</p>
+> php artisan serve
+5. <p>Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api<br></p>
     i- Check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron
     > sudo systemctl status cron (OR cronie)
     ii- Edit user's cron list
