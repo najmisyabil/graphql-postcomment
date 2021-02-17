@@ -26,7 +26,7 @@
 *   Edit user's cron list. Open the crontab list
     > crontab -e
 *   Paste and save this to enable the built-in laravel scheduler<br>
-    "* * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1"
+    `* * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1`
     <h6>OR</h6>
 *   If you just want to populate the comments and posts table for one time only. Just run
     > php artisan schedule:run<br>
