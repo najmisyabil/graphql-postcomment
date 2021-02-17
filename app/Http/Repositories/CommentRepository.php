@@ -27,9 +27,9 @@ class CommentRepository
         try {
             $response = Http::get($url)->json();
         } catch (\Exception $e) {
-            Log::error('Failed to fetch Comments', ['message' => $e->getMessage()]);
+            $response = [];
 
-            $response = 400;
+            Log::error('Failed to fetch Comments', ['message' => $e->getMessage()]);
         }
 
         return $response;
