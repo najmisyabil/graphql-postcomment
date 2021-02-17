@@ -35,9 +35,9 @@
     > sudo systemctl status cron
 *   If cron is not installed, kindly installed cron first and enable it
     > sudo systemctl start cron
-*   Edit user's cron list. Open the crontab list
+*   Edit user's cron list using crontab
     > crontab -e
-*   Paste and save this to enable the built-in laravel scheduler<br>
+*   Paste and save this to enable laravel scheduler<br>
     `* * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1`
     <h5>OR</h5>
 *   If you just want to populate the comments and posts table for one time only. Just run
