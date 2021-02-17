@@ -12,13 +12,21 @@
 1. <p>Git clone from this repo</p>
 2. <p>cd into the cloned directory</p>
 3. <p>setup .env (Copy .env.example as .env and set DB details)</p>
-4. <p>Open a terminal and run:<br>
-    i- composer install<br>
-    ii- php artisan key:generate<br>
-    iii- php artisan serve<br></p>
+4. <p>Open a terminal and run:
+    > composer install
+    Wait until the install process is completed, then run 
+    > php artisan key:generate
+    followed by
+    > php artisan serve</p>
 5. <p>Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api<br>
-    i- sudo systemctl status cron (check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron)<br>
-    ii- crontab -e (to edit user's cron)<br>
-    iii- paste and save this -> * * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1 <h6>OR</h6>
-    iv- Just run "php artisan schedule:run" if you just want to populate the comments and posts table for one time only<br></p>
+    i- Check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron
+    > sudo systemctl status cron (OR cronie)
+    ii- Edit user's cron list
+    > crontab -e
+    iii- paste and save this to enable the built-in laravel scheduler
+    > * * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1
+    <h6>OR</h6>
+    iv- If you just want to populate the comments and posts table for one time only. Just run
+    > php artisan schedule:run
+    </p>
 6. <p>Open GraphiQL or GraphQl Playground to test the api</p>
