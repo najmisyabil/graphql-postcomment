@@ -20,7 +20,7 @@
    i- sudo systemctl status cron (check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron)<br>
    ii- crontab -e (to edit user's cron)<br>
    iii- paste and save this -> * * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1<br>
-## OR <br>
+<h4>OR</h4><br>
    if you just want to populate the comments and posts table for one time only, run:<br>
     php artisan schedule:run
 6. Open GraphiQL or GraphQl Playground to test the api
