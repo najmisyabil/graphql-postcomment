@@ -9,25 +9,32 @@
 
 ## Step-by-step guide
 
-1. Git clone from this repo<br>
-2. cd into the cloned directory<br>
-3. setup .env (Copy .env.example as .env and set DB details)<br>
+1. Git clone from this repo
+
+2. cd into the cloned directory
+
+3. setup .env (Copy .env.example as .env and set DB details)
+
 4. Open a terminal and run:
-    > composer install<br>
+    > composer install
+
 5. Wait until the install process is completed, then run
-    > php artisan key:generate<br>
+    > php artisan key:generate
+
 6. Followed by
-    > php artisan serve<br>
+    > php artisan serve
+
 7. Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api
 *   Check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron
-    > sudo systemctl status cron (OR cronie)
+    > sudo systemctl status cron
 *   If cron is not installed, kindly installed cron first and enable it
-    > sudo systemctl start cron (OR cronie)
+    > sudo systemctl start cron
 *   Edit user's cron list. Open the crontab list
     > crontab -e
-*   Paste and save this to enable the built-in laravel scheduler<br>
+*   Paste and save this to enable the built-in laravel scheduler
     `* * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1`
     <h6>OR</h6>
 *   If you just want to populate the comments and posts table for one time only. Just run
-    > php artisan schedule:run<br>
+    > php artisan schedule:run
+
 8. Open GraphiQL or GraphQl Playground to test the api
