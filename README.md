@@ -44,4 +44,4 @@
     > php artisan schedule:run
 
 
-8. Open GraphiQL or GraphQl Playground to test the api
+8. Open GraphiQL or GraphQL Playground to test the api
