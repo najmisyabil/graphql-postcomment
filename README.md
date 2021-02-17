@@ -14,10 +14,12 @@
 3. <p>setup .env (Copy .env.example as .env and set DB details)</p>
 4. <p>Open a terminal and run:</p>
 > composer install
-<p>Wait until the install process is completed, then run</p> 
+<p>Wait until the install process is completed, then run</p>
 > php artisan key:generate
+
 <p>followed by</p>
 > php artisan serve
+
 5. <p>Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api<br></p>
     i- Check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron
     > sudo systemctl status cron (OR cronie)
