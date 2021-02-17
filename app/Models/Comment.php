@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Comment extends Model
 {
+    protected $guarded = [];
     protected $hidden = ['created_at', 'updated_at'];
 
     public function post(): BelongsTo
