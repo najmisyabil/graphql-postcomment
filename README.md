@@ -22,16 +22,16 @@
     > composer install
 
 
-5. Wait until the install process is completed, then run
-    > php artisan key:generate
+5. After the installation finished, run database migration together with database seeder to populate the users table with random users
+    > php artisan migrate && php artisan db:seed
 
 
-6. Followed by
+6. Now the app is ready to serve
     > php artisan serve
 
 
 7. Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api
-*   Check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron
+*   Check if cron is already installed and running. For Arch Linux based can try run cronie instead of cron
     > sudo systemctl status cron
 *   If cron is not installed, kindly installed cron first and enable it
     > sudo systemctl start cron
