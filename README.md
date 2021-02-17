@@ -19,7 +19,7 @@
 5. <p>Setup crontab to periodically run the scheduler to download and update posts and comments from third-party api<br>
     i- sudo systemctl status cron (check if cron is already installed and running. For Arch Linux based can try check on cronie instead of cron)<br>
     ii- crontab -e (to edit user's cron)<br>
-    iii- paste and save this -> * * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1 <h5>OR</h5><br>
+    iii- paste and save this -> * * * * * php /path/to/project/directory/artisan schedule:run 1>> /dev/null 2>&1 <h6>OR</h6>
     iv- if you just want to populate the comments and posts table for one time only, run:<br>
     php artisan schedule:run</p>
 6. <p>Open GraphiQL or GraphQl Playground to test the api</p>
